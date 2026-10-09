@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.set
+*.sorted
+merged_tmp_*.txt
+outfile.txt
