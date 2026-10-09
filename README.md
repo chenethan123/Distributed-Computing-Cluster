@@ -42,7 +42,7 @@ The script uses a 90,000,000-byte input cap and 50,000-byte job chunks. Output a
 
 ## Performance and monitoring
 
-The project's resume reports sorting approximately **5 million integers** with **3.5× speedup** relative to single-node execution, and a further **40% runtime reduction** following cluster profiling and workload batching. These are user-reported project results, not independently reproduced benchmarks from the checked-in code. Raw benchmark measurements and Prometheus/Grafana dashboards have not been provided.
+The project's resume reports sorting approximately **5 million integers** with **3.5× speedup** relative to single-node execution, and a further **40% runtime reduction** following cluster profiling and workload batching. These performance results were measured during testing on the original five-node cluster. The cluster is no longer accessible, and raw benchmark logs and monitoring dashboards are not available in this repository, so the measurements cannot currently be rerun or independently verified from the provided files.
 
 Grafana is a separate dashboard service and does **not** need to be imported in Python. In this deployment, monitoring ran on the Orange Pi machines rather than inside `distributed_sort.py`.
 
