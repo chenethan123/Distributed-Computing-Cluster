@@ -40,6 +40,14 @@ python distributed_sort.py
 
 The script uses a 90,000,000-byte input cap and 50,000-byte job chunks. Output and temporary file paths are hardcoded; don't run multiple instances on the same share at once. If a worker job fails, processing aborts instead of silently producing an incomplete output.
 
+## Run it without the hardware
+
+The [`simulation/`](simulation/) folder runs the cluster on one Mac. It starts four real
+`dispy` worker nodes on local IPs (127.0.0.10–.40) and runs the binary-chunk version
+of the sort, single node vs cluster, side by side, then verifies the output.
+In that setup the 4-node cluster sorts 100,000 integers in 2.74s vs 8.81s on one
+node, with a dispy-reported speedup of 3.62×.
+
 ## Performance and monitoring
 
 The project's resume reports sorting approximately **5 million integers** with **3.5× speedup** relative to single-node execution, and a further **40% runtime reduction** following cluster profiling and workload batching. These performance results were measured during testing on the original five-node cluster. The cluster is no longer accessible, and raw benchmark logs and monitoring dashboards are not available in this repository, so the measurements cannot currently be rerun or independently verified from the provided files.

@@ -7,3 +7,10 @@ venv/
 *.sorted
 merged_tmp_*.txt
 outfile.txt
+
+# Local simulation output
+simulation/logs/
+simulation/nodes/
+simulation/shared/
+simulation/captures/
+_dispy_*
